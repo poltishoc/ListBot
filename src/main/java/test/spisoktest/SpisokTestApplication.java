@@ -1,0 +1,13 @@
+package test.spisoktest;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpisokTestApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpisokTestApplication.class, args);
+    }
+
+}
