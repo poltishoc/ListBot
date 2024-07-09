@@ -10,4 +10,4 @@ services:
       - key: DATABASE_URL
         value: jdbc:postgresql://localhost:5432/postgres
       - key: TELEGRAM_BOT_TOKEN
-        value: 7326836857:AAFPHN4TxTBA1ExabXyxuICYwEare83LKso
+        value: 7326836857:AAEzfT-cPEddK8J-QKQTpXbuuGhQR_rtiVo
