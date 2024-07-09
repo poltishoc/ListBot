@@ -13,12 +13,19 @@ public class MessageService {
     @Autowired
     private MessageRepository messageRepository;
 
-    public List<Message> getAllMessages() {
-        return messageRepository.findAll();
+    public List<Message> getAllMessagesByUserId(long userId) {
+        return messageRepository.findByUserId(userId);
     }
 
-    public Message saveMessage(String content) {
-        Message message = new Message(content);
+    public Message saveMessage(String content, long userId) {
+        Message message = new Message(content, userId);
         return messageRepository.save(message);
     }
+
+    public void deleteMessageById(long userId) {
+        List<Message> messages = messageRepository.findByUserId(userId);
+        messageRepository.deleteAll(messages);
+
+    }
 }
+

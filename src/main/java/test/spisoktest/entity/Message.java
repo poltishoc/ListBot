@@ -1,9 +1,6 @@
 package test.spisoktest.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Setter
@@ -12,6 +9,7 @@ import lombok.*;
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class Message {
 
     @Id
@@ -20,11 +18,12 @@ public class Message {
 
     private String content;
 
-    public Message() {}
+    @Column(nullable = false)
+    private long userId;
 
-    public Message(String content) {
+    public Message(String content, long userId) {
         this.content = content;
+        this.userId = userId;
     }
-
 
 }

@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: Spisok-bot
+    env: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        value: jdbc:postgresql://localhost:5432/postgres
+      - key: TELEGRAM_BOT_TOKEN
+        value: 7326836857:AAFPHN4TxTBA1ExabXyxuICYwEare83LKso
