@@ -8,6 +8,6 @@ services:
     autoDeploy: true
     envVars:
       - key: DATABASE_URL
-        value: jdbc:postgresql://localhost:5432/postgres
+        value: postgresql://spisokbot_user:p3fbgB0pxFmr1tbXXsMiCmp57enPzgx3@dpg-cq6i3ijv2p9s73cn43tg-a/spisokbot
       - key: TELEGRAM_BOT_TOKEN
         value: 7326836857:AAEzfT-cPEddK8J-QKQTpXbuuGhQR_rtiVo
